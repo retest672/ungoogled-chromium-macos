@@ -30,6 +30,7 @@ cat "$_main_repo/flags.gn" "$_root_dir/flags.macos.gn" > "$_src_dir/out/Default/
 
 cd "$_src_dir"
 
+export SDKROOT="$(xcrun --show-sdk-path)"
 ./tools/gn/bootstrap/bootstrap.py -o out/Default/gn --skip-generate-buildfiles
 ./out/Default/gn gen out/Default --fail-on-unused-args
 ninja -C out/Default chrome chromedriver
