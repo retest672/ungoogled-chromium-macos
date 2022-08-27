@@ -5,7 +5,6 @@ debian_buster/fixes/empty-array.patch
 debian_buster/disable/installer.patch
 debian_buster/warnings/printf.patch
 debian_buster/warnings/multichar.patch
-debian_buster/warnings/null-destination.patch
 debian_buster/warnings/int-in-bool-context.patch
 ungoogled-chromium/macos/disable-symbol-order-verification.patch
 ungoogled-chromium/macos/disable-crashpad-handler.patch
@@ -14,5 +13,4 @@ ungoogled-chromium/macos/fix-visibility.patch
 ungoogled-chromium/macos/fix-dsymutil.patch
 ungoogled-chromium/macos/fix-clang-format-path.patch
 ungoogled-chromium/macos/fix-runTsc-log-info.patch
-ungoogled-chromium/mute-precocious-compiler-flags.patch
 ungoogled-chromium/fix-node-path.patch

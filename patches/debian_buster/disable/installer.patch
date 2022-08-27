@@ -3,7 +3,7 @@ author: Michael Gilbert <mgilbert@debian.org>
 
 --- a/BUILD.gn
 +++ b/BUILD.gn
-@@ -81,8 +81,6 @@ group("gn_all") {
+@@ -80,8 +80,6 @@ group("gn_all") {
      ":gn_visibility",
      "//base:base_perftests",
      "//base:base_unittests",

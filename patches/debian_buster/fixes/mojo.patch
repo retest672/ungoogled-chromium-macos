@@ -3,7 +3,7 @@ author: Michael Gilbert <mgilbert@debian.org>
 
 --- a/content/shell/BUILD.gn
 +++ b/content/shell/BUILD.gn
-@@ -251,7 +251,6 @@ static_library("content_shell_lib") {
+@@ -252,7 +252,6 @@ static_library("content_shell_lib") {
      "//content:content_resources",
      "//content:dev_ui_content_resources",
      "//content/public/common",
