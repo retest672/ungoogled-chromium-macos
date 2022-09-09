@@ -42,6 +42,6 @@ chrome/installer/mac/pkg-dmg \
 
 # Fix issue where macOS requests permission for incoming network connections
 # See https://github.com/ungoogled-software/ungoogled-chromium-macos/issues/17
-xattr -csr out/Default/Chromium.app
+xattr -cs out/Default/Chromium.app
 # Using ad-hoc signing
 codesign --force --deep --sign - out/Default/Chromium.app
