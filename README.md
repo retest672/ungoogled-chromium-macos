@@ -12,8 +12,8 @@ macOS packaging for [ungoogled-chromium](//github.com/Eloston/ungoogled-chromium
 
 ### Software requirements
 
-* macOS 10.12+
-* Xcode 8-9
+* macOS 10.15+
+* Xcode 12
 * Homebrew
 * Perl (for creating a `.dmg` package)
 * Python 2, specifically 2.7.13 or newer, as `python` in PATH
