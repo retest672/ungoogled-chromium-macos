@@ -17,7 +17,7 @@ if [[ -f "$_root_dir/build_finished.log" ]] ; then
   
   cd "$_src_dir"
 
-  xattr -csr out/Default/Chromium.app
+  xattr -cs out/Default/Chromium.app
   # Using ad-hoc signing
   codesign --force --deep --sign - out/Default/Chromium.app
 
