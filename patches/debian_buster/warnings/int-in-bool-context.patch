@@ -39,12 +39,12 @@ author: Michael Gilbert <mgilbert@debian.org>
  }
 --- a/third_party/blink/renderer/core/html/parser/html_tree_builder.cc
 +++ b/third_party/blink/renderer/core/html/parser/html_tree_builder.cc
-@@ -1006,7 +1006,7 @@ void HTMLTreeBuilder::ProcessStartTagFor
-   }
-   if (token->GetName() == html_names::kColTag) {
-     ProcessFakeStartTag(html_names::kColgroupTag);
--    DCHECK(kInColumnGroupMode);
-+    DCHECK_EQ(GetInsertionMode(), kInColumnGroupMode);
-     ProcessStartTag(token);
-     return;
-   }
+@@ -1094,7 +1094,7 @@ void HTMLTreeBuilder::ProcessStartTagFor
+       return;
+     case HTMLTag::kCol:
+       ProcessFakeStartTag(HTMLTag::kColgroup);
+-      DCHECK(kInColumnGroupMode);
++      DCHECK_EQ(GetInsertionMode(), kInColumnGroupMode);
+       ProcessStartTag(token);
+       return;
+     case HTMLTag::kTbody:
