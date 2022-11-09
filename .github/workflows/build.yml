@@ -31,7 +31,7 @@ jobs:
       status: ${{ steps.build.outputs.status }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         name: Clone repository
         with:
           submodules: true
@@ -50,18 +50,18 @@ jobs:
         id: bake
         run: ./github_prepare_artifacts.sh | tee -a github_actions_upload.log
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_artifact
           path: upload_part_build/
       - name: Upload logs
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_logs
           path: upload_logs/
       - name: Upload disk-image as artifact after build
         if: ${{ steps.build.outputs.status == 'finished' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ steps.bake.outputs.file_name }}
           path: ./release_asset/${{ steps.bake.outputs.file_name }}
@@ -99,7 +99,7 @@ jobs:
       status: ${{ steps.build.outputs.status }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         name: Clone repository
         with:
           submodules: true
@@ -108,7 +108,7 @@ jobs:
       - name: Disable spotlight
         run: sudo mdutil -a -i off
       - name: Download build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
             name: github_build_artifact
       - name: Install dependencies
@@ -122,18 +122,18 @@ jobs:
         id: bake
         run: ./github_prepare_artifacts.sh | tee -a github_actions_upload.log
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_artifact
           path: upload_part_build/
       - name: Upload logs
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_logs
           path: upload_logs/
       - name: Upload disk-image as artifact after build
         if: ${{ steps.build.outputs.status == 'finished' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ steps.bake.outputs.file_name }}
           path: ./release_asset/${{ steps.bake.outputs.file_name }}
@@ -171,7 +171,7 @@ jobs:
       status: ${{ steps.build.outputs.status }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         name: Clone repository
         with:
           submodules: true
@@ -180,7 +180,7 @@ jobs:
       - name: Disable spotlight
         run: sudo mdutil -a -i off
       - name: Download resumed build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
             name: github_build_artifact
       - name: Install dependencies
@@ -194,18 +194,18 @@ jobs:
         id: bake
         run: ./github_prepare_artifacts.sh | tee -a github_actions_upload.log
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_artifact
           path: upload_part_build/
       - name: Upload logs
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_logs
           path: upload_logs/
       - name: Upload disk-image as artifact after build
         if: ${{ steps.build.outputs.status == 'finished' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ steps.bake.outputs.file_name }}
           path: ./release_asset/${{ steps.bake.outputs.file_name }}
@@ -243,7 +243,7 @@ jobs:
       status: ${{ steps.build.outputs.status }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         name: Clone repository
         with:
           submodules: true
@@ -252,7 +252,7 @@ jobs:
       - name: Disable spotlight
         run: sudo mdutil -a -i off
       - name: Download resumed build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
             name: github_build_artifact
       - name: Install dependencies
@@ -266,18 +266,18 @@ jobs:
         id: bake
         run: ./github_prepare_artifacts.sh | tee -a github_actions_upload.log
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_artifact
           path: upload_part_build/
       - name: Upload logs
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_logs
           path: upload_logs/
       - name: Upload disk-image as artifact after build
         if: ${{ steps.build.outputs.status == 'finished' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ steps.bake.outputs.file_name }}
           path: ./release_asset/${{ steps.bake.outputs.file_name }}
@@ -315,7 +315,7 @@ jobs:
       status: ${{ steps.build.outputs.status }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         name: Clone repository
         with:
           submodules: true
@@ -324,7 +324,7 @@ jobs:
       - name: Disable spotlight
         run: sudo mdutil -a -i off
       - name: Download resumed build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
             name: github_build_artifact
       - name: Install dependencies
@@ -338,18 +338,18 @@ jobs:
         id: bake
         run: ./github_prepare_artifacts.sh | tee -a github_actions_upload.log
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_artifact
           path: upload_part_build/
       - name: Upload logs
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_logs
           path: upload_logs/
       - name: Upload disk-image as artifact after build
         if: ${{ steps.build.outputs.status == 'finished' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ steps.bake.outputs.file_name }}
           path: ./release_asset/${{ steps.bake.outputs.file_name }}
@@ -387,7 +387,7 @@ jobs:
       status: ${{ steps.build.outputs.status }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         name: Clone repository
         with:
           submodules: true
@@ -396,7 +396,7 @@ jobs:
       - name: Disable spotlight
         run: sudo mdutil -a -i off
       - name: Download resumed build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
             name: github_build_artifact
       - name: Install dependencies
@@ -410,18 +410,18 @@ jobs:
         id: bake
         run: ./github_prepare_artifacts.sh | tee -a github_actions_upload.log
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_artifact
           path: upload_part_build/
       - name: Upload logs
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_logs
           path: upload_logs/
       - name: Upload disk-image as artifact after build
         if: ${{ steps.build.outputs.status == 'finished' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ steps.bake.outputs.file_name }}
           path: ./release_asset/${{ steps.bake.outputs.file_name }}
@@ -459,7 +459,7 @@ jobs:
       status: ${{ steps.build.outputs.status }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         name: Clone repository
         with:
           submodules: true
@@ -468,7 +468,7 @@ jobs:
       - name: Disable spotlight
         run: sudo mdutil -a -i off
       - name: Download resumed build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
             name: github_build_artifact
       - name: Install dependencies
@@ -482,18 +482,18 @@ jobs:
         id: bake
         run: ./github_prepare_artifacts.sh | tee -a github_actions_upload.log
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_artifact
           path: upload_part_build/
       - name: Upload logs
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_logs
           path: upload_logs/
       - name: Upload disk-image as artifact after build
         if: ${{ steps.build.outputs.status == 'finished' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ steps.bake.outputs.file_name }}
           path: ./release_asset/${{ steps.bake.outputs.file_name }}
@@ -531,7 +531,7 @@ jobs:
       status: ${{ steps.build.outputs.status }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         name: Clone repository
         with:
           submodules: true
@@ -540,7 +540,7 @@ jobs:
       - name: Disable spotlight
         run: sudo mdutil -a -i off
       - name: Download resumed build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
             name: github_build_artifact
       - name: Install dependencies
@@ -554,18 +554,18 @@ jobs:
         id: bake
         run: ./github_prepare_artifacts.sh | tee -a github_actions_upload.log
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_artifact
           path: upload_part_build/
       - name: Upload logs
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: github_build_logs
           path: upload_logs/
       - name: Upload disk-image as artifact after build
         if: ${{ steps.build.outputs.status == 'finished' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ steps.bake.outputs.file_name }}
           path: ./release_asset/${{ steps.bake.outputs.file_name }}
