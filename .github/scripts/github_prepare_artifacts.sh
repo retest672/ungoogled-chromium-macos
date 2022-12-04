@@ -35,9 +35,9 @@ if [[ -f "$_root_dir/build_finished.log" ]] ; then
 
   # https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
   # echo "::set-output name=file_name::$_file_name"
-  echo "{file_name}={$_file_name}" >> $GITHUB_OUTPUT
+  echo "file_name=$_file_name" >> $GITHUB_OUTPUT
   # echo "::set-output name=release_tag_version::$_release_tag_version"
-  echo "{release_tag_version}={$_release_tag_version}" >> $GITHUB_OUTPUT
+  echo "release_tag_version=$_release_tag_version" >> $GITHUB_OUTPUT
 
   _gh_run_href="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
   
