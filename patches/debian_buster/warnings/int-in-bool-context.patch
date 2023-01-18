@@ -28,7 +28,7 @@ author: Michael Gilbert <mgilbert@debian.org>
  }
 --- a/third_party/blink/renderer/core/html/parser/html_tree_builder.cc
 +++ b/third_party/blink/renderer/core/html/parser/html_tree_builder.cc
-@@ -1089,7 +1089,7 @@ void HTMLTreeBuilder::ProcessStartTagFor
+@@ -1099,7 +1099,7 @@ void HTMLTreeBuilder::ProcessStartTagFor
        return;
      case HTMLTag::kCol:
        ProcessFakeStartTag(HTMLTag::kColgroup);

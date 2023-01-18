@@ -3,7 +3,7 @@ author: Michael Gilbert <mgilbert@debian.org>
 
 --- a/BUILD.gn
 +++ b/BUILD.gn
-@@ -153,8 +153,6 @@ group("gn_all") {
+@@ -154,8 +154,6 @@ group("gn_all") {
  
    if (!is_castos) {
      deps += [
