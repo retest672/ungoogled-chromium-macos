@@ -14,5 +14,5 @@ ungoogled-chromium/macos/fix-dsymutil.patch
 ungoogled-chromium/macos/fix-clang-format-path.patch
 ungoogled-chromium/macos/fix-runTsc-log-info.patch
 ungoogled-chromium/macos/skip-clang_revision-verify.patch
+ungoogled-chromium/macos/fix-app_shim_manager_mac.patch
 ungoogled-chromium/fix-node-path.patch
-ungoogled-chromium/pr2214.patch
