@@ -15,6 +15,7 @@ _ungoogled_revision=$(cat "$_root_dir"/ungoogled-chromium/revision.txt)
 _package_revision=$(cat "$_root_dir"/revision.txt)
 
 # Add local clang and build tools to PATH
+
 # export PATH="$PATH:$_src_dir/third_party/llvm-build/Release+Asserts/bin"
 
 rm -rf "$_src_dir/out" || true
