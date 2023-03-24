@@ -21,7 +21,6 @@ on:
       - '!README.md'
       - '!LICENSE'
       - '!devutils/**'
-  workflow_dispatch:
 # alternatively use on.push.branches: release/*
 
 jobs:
