@@ -21,10 +21,12 @@ on:
       - '!README.md'
       - '!LICENSE'
       - '!devutils/**'
+  workflow_dispatch:
 # alternatively use on.push.branches: release/*
 
 jobs:
   build_job_01:
+    timeout-minutes: 600
     name: Start Building Ungoogled-Chromium for macOS
     runs-on: macos-12
     outputs:
@@ -91,6 +93,7 @@ jobs:
   
   build_job_02:
     continue-on-error: true
+    timeout-minutes: 600
     name: Resuming Building Ungoogled-Chromium for macOS
     runs-on: macos-12
     needs: build_job_01
@@ -163,6 +166,7 @@ jobs:
 
   build_job_03:
     continue-on-error: true
+    timeout-minutes: 600
     name: Further Resuming Building Ungoogled-Chromium for macOS
     runs-on: macos-12
     needs: build_job_02
@@ -235,6 +239,7 @@ jobs:
 
   build_job_04:
     continue-on-error: true
+    timeout-minutes: 600
     name: Further Resuming Building Ungoogled-Chromium for macOS
     runs-on: macos-12
     needs: build_job_03
@@ -307,6 +312,7 @@ jobs:
 
   build_job_05:
     continue-on-error: true
+    timeout-minutes: 600
     name: Further Resuming Building Ungoogled-Chromium for macOS
     runs-on: macos-12
     needs: build_job_04
@@ -379,6 +385,7 @@ jobs:
 
   build_job_06:
     continue-on-error: true
+    timeout-minutes: 600
     name: Further Resuming Building Ungoogled-Chromium for macOS
     runs-on: macos-12
     needs: build_job_05
@@ -451,6 +458,7 @@ jobs:
 
   build_job_07:
     continue-on-error: true
+    timeout-minutes: 600
     name: Further Resuming Building Ungoogled-Chromium for macOS
     runs-on: macos-12
     needs: build_job_06
@@ -523,6 +531,7 @@ jobs:
 
   build_job_08:
     continue-on-error: true
+    timeout-minutes: 600
     name: Further Resuming Building Ungoogled-Chromium for macOS
     runs-on: macos-12
     needs: build_job_07
